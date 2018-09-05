@@ -9,6 +9,8 @@
     * [Dasar Markdown](01/markdown-basic.md)
     * [Penulisan Inline Documentation](01/doc-inline.md)
 * [Mengorganisasikan sumber daya pemrograman sesuai konteks](02/readme.md)
-    * [Naming Convention di Javascript](02/naming-convention.md)
+    * [Aturan Struktur File/Folder di Javascript](02/js-structure.md)
     * [Aturan Penulisan Dokumentasi Program](02/doc-rules.md)
+    * [Dasar-dasar Unified Modelling Language](02/uml.md)
+* [Referensi & Tool](03/readme.md)
 
