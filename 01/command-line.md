@@ -1,7 +1,47 @@
-# Dasar Command Line
+# Dasar Perintah Command Line
 
-<p data-height="265" data-theme-id="0" data-slug-hash="gofFm" data-default-tab="html,result" data-user="andreasstorm" data-pen-title="Button Shine" class="codepen">
-	See the Pen 
-	<a href="https://codepen.io/andreasstorm/pen/gofFm/">Button Shine</a> by Andreas Storm (<a href="https://codepen.io/andreasstorm">@andreasstorm</a>) on <a href="https://codepen.io">CodePen</a>. </p>
+Pengetahuan perintah dasar command line sangat penting dipahami developer atau programmer karena hampir semua aktivitas dilakukan melalui command line
 
-<script async src="https://static.codepen.io/assets/embed/ei.js"> </script>
+## Command Line di Windows
+
+di Windows command line bisa diakses melalui command prompt atau mengetik ``cmd`` dari task
+
+#### Mengetahui posisi folder
+
+```C:> dir```
+
+#### Berpindah ke folder lain
+
+#### Melihat isi suatu folder tertentu
+
+#### Copy file atau folder ke tempat lain
+
+#### Memindahkan file atau folder ke tempat lain
+
+#### Menghapus file atau folder
+
+#### Membuat file baru
+
+#### Membuat folder baru
+
+#### Menjalankan aplikasi
+
+## Command Line di Linux, OSX atau UNIX based OS
+
+di sistem operasi berbasis UNIX seperti Linux dan OSX program command line biasa disebut ``terminal`` atau ``console``
+
+#### Berpindah ke folder lain
+
+#### Melihat isi suatu folder tertentu
+
+#### Copy file atau folder ke tempat lain
+
+#### Memindahkan file atau folder ke tempat lain
+
+#### Menghapus file atau folder
+
+#### Membuat file baru
+
+#### Membuat folder baru
+
+#### Menjalankan aplikasi

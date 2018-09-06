@@ -1,2 +1,0 @@
-# Naming Convention di Javascript
-

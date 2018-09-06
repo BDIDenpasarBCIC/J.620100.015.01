@@ -1,2 +1,3 @@
 # Mengelola sumber daya pemrograman sesuai karakter
 
+Di Bab ini kita akan belajar mengenai tool-tool dasar yang wajib digunakan developer dan programmer di dunia industri untuk mengelola sebuah program atau project agar mudah dikelola yaitu **Git** dan **Markdown**, dikembangakan dan di maintenance baik dalam kerja individu maupun dalam sebuah team. Kita juga akan belajar menguasai aturan penulisan *inline documentation* di dalam *source code*
