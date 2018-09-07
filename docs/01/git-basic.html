@@ -317,13 +317,59 @@
                                 
                                 <h1 id="perintah-dasar-git">Perintah Dasar Git</h1>
 <h2 id="definisi-git">Definisi Git</h2>
+<p>Git adalah distributed software version control yang paling banyak digunakan oleh developer dan programmer. Dengan Git mengelola source codes dalam sebuah project atau program menjadi mudah baik jika bekerja secara individu atau dalam sebuah team. </p>
 <h2 id="mengapa-kita-memerlukan-git">Mengapa kita memerlukan Git</h2>
+<p>Beberapa kegunaan Git bagi Developer atau Programmer:</p>
+<ul>
+<li>Melakukan tracking history sebuah files</li>
+<li>Melakukan revert process terhadap source codes</li>
+<li>Membuat beberapa versi berbeda dalam satu program atau project yang sama</li>
+</ul>
 <h2 id="fitur-git">Fitur Git</h2>
+<ul>
+<li>Distributed, artinya kita tidak perlu terhubung ke satu server tertentu untuk bisa menggunakan Git</li>
+<li>Offline, artinya kita tidak perlu selalu terhubung secara online untuk bisa menggunakan Git. Kita hanya perlu online jika ingin melakukan proses <code>pull</code> dan <code>push</code> dari remote repository</li>
+</ul>
 <h2 id="inisiasi-project-repository">Inisiasi Project (Repository)</h2>
+<p>Program atau project di Git disebut Repository. Untuk menjalankan perintah-perintah di Git, kita bisa jalankan dari console/terminal atau command line. Sebagai alternatif, terdapat beberapa software GUI untuk memudahkan kita menjalankan perintah Git.</p>
+<p>Buka command line/console/terminal, buatlah sebuah folder baru untuk meletakkan file-file source code</p>
+<pre><code>
+
+</code></pre><p>Ketikan perintah </p>
+<p><code>git init</code> </p>
+<p>untuk inisiasi project.</p>
+<p>Git akan membuat sebuat folder bernama <code>.git</code> untuk menyimpan referensi dan konfigurasi project. Pada tahap ini folder kita sudah menjadi <code>repository</code> git yang siap digunakan.</p>
 <h2 id="menambahkan-files-ke-dalam-staging">Menambahkan files ke dalam Staging</h2>
+<p>Sebelum perubahan di file tercatat di Git, kita harus memasukan file tersebut ke dalam tahap staging. dengan mengetik </p>
+<p><code>git add namafile</code> </p>
+<p>dimana namafile adalah nama file yang akan kita staging. Jika kita ingin memasukan semua file di folder tersebut ketik</p>
+<p><code>git add .</code></p>
+<p>untuk memasukan beberapa file saja</p>
+<p><code>git add file1 file2 file3</code></p>
+<p>Setelah file yang ingin kita tracking sudah masuk ke dalam tahap staging, proses selanjutnya adalah bekerja seperti biasa menggunakan IDE atau text editor. Untuk setiap perubahan di file, kita harus menjalankan perintah <code>git add</code> agar perubahan yang sudah dilakukan masuk ke dalam tahap staging</p>
 <h2 id="proses-commit">Proses Commit</h2>
-<h2 id="proses-index">Proses Index</h2>
+<p>Tahap selanjutnya setelah menambahkan file ke tahap staging, adalah merekam perubahan tersebut agar bisa disimpan history/log dari perubahan itu. Ketik</p>
+<p><code>git commit -m &apos;catatan perubahan file&apos;</code></p>
+<p>Pada tahap ini, seluruh perubahan file telah terekam dan proses kembali diulang, mulai dari <code>git init</code> dilanjutkan dengan <code>git commit -m &apos;pesan perubahan&apos;</code></p>
+<p>Penting di ingat untuk membuat pesan perubahan atau <em>log message</em> singkat dan jelas. Pesan perubahan yang bagus adalah tidak terlalu panjang tapi singkat agar nanti ketika kita mereview perubahan-perubahan sebelumnya, kita bisa mengingat perubahan apa yang dilakukan di file tersebut.</p>
+<p>Contoh <em>log message</em> yang bagus:</p>
+<p><code>git commit -m &apos;Memperbaiki tampilan di mobile sehingga menu tidak overlapping&apos;</code></p>
+<p>Contoh <em>log message</em> yang <strong>tidak bagus</strong>:</p>
+<p><code>git commit -m &apos;ada perubahan&apos;</code></p>
+<h2 id="melihat-history">Melihat history</h2>
+<p>Untuk melihat perubahan-perubahan apa saja di dalam sebuah repository ketik</p>
+<p><code>git log</code></p>
 <h2 id="konsep-branch">Konsep Branch</h2>
+<p>Branch dalam analogi umum adalah cabang atau kelas, dalam lingkup programming atau <em>Software Development Lifecycle</em> disingkat SDLC, konsep branch artinya kita bisa memiliki beberapa versi berbeda dari sebuah program namun tetap berasal dari satu source code yang sama. Dengan fitur versioning, cukup dengan satu source code yang sama kita bisa memiliki versi <code>develop</code> <code>beta</code> <code>hotfix</code> <code>production</code> dan seterusnya.</p>
+<p>Keuntungan dari beberapa branch yang berbeda:</p>
+<ul>
+<li>Kita bisa menambahkan fitur baru di branch berbeda tanpa harus merubah source code yang sudah live/production, dengan demikian kemungkinan error di production bisa kita hindari</li>
+<li>Melakukan perbaikan di branch tertentu tanpa harus merubah branch lain yang mungkin sedang dikerjakan oleh rekan developer lain. Di Git, saat pertama kali kita membuat repository hanya terdapat satu branch yang bernama <code>master</code></li>
+</ul>
+<p>Untuk melihat branch yang ada ketik</p>
+<p><code>git branch</code></p>
+<p>Untuk membuat branch baru dan masuk ke dalam branch tersebut, ketik:</p>
+<p><code>git checkout -b namabranchbaru</code></p>
 <h2 id="hosting-repository-di-github">Hosting Repository di Github</h2>
 <h2 id="push-dan-pull-dari-github">Push dan Pull dari Github</h2>
 <h2 id="solusi-conflict">Solusi Conflict</h2>
@@ -370,7 +416,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Perintah Dasar Git","level":"1.2.3","depth":2,"next":{"title":"Workflow di Git","level":"1.2.4","depth":2,"path":"01/git-workflow.md","ref":"01/git-workflow.md","articles":[]},"previous":{"title":"Konsep Software Version Control","level":"1.2.2","depth":2,"path":"01/version-control.md","ref":"01/version-control.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01/git-basic.md","mtime":"2018-09-06T02:06:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-06T03:00:08.453Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Perintah Dasar Git","level":"1.2.3","depth":2,"next":{"title":"Workflow di Git","level":"1.2.4","depth":2,"path":"01/git-workflow.md","ref":"01/git-workflow.md","articles":[]},"previous":{"title":"Konsep Software Version Control","level":"1.2.2","depth":2,"path":"01/version-control.md","ref":"01/version-control.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01/git-basic.md","mtime":"2018-09-06T10:48:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-07T00:36:01.591Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
